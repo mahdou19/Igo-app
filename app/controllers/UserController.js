@@ -1,4 +1,15 @@
+const User = require('../models/User');
 
-module.exports.index = (req, res) => {
-  res.render('users/index');
+exports.index = async function(req, res) {
+  console.log('Create user');
+
+  await User.create({
+    name: 'test',
+    email:  'test@mail.com',
+  });
+  
+  const users =  await User.list();
+  console.log(users);
+  res.render('users/index', { users });
+
 };
