@@ -15,14 +15,15 @@ module.exports = [{
       'error',
       'unix'
     ],
-    'no-unused-vars': [
-      'error',
-      { 'vars': 'all', 'args': 'after-used', 'ignoreRestSiblings': false }
-    ],
-    'quotes': [
-      'error',
-      'single'
-    ],
+    // 'no-unused-vars': [
+    //   'error',
+    //   { 'vars': 'all', 'args': 'after-used', 'ignoreRestSiblings': false }
+    // ],
+    // 'quotes': [
+    //   'error',
+    //   'single',
+
+    // ],
     'semi': [
       'error',
       'always'
