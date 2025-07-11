@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   deleteButtons.forEach((button) => {
     const id = button.getAttribute("data-id");
     button.addEventListener("click", () => {
-      deleteUser(id);
+      deleteUser(id, button);
     });
   });
 

@@ -1,4 +1,4 @@
-const deleteUser = async (id) => {
+const deleteUser = async (id, triggerElement = null) => {
   if (!id) {
     alert("Id required");
     return;
@@ -9,10 +9,14 @@ const deleteUser = async (id) => {
       const response = await fetch(`/users/${id}`, {
         method: "DELETE",
       });
-
-      if (response.ok) {
-        const row = triggerElement.closest("tr");
-        if (row) row.remove();
+      
+      if (response.status === 200) {
+        if (triggerElement) {
+          const row = triggerElement.closest("tr");
+          if (row) row.remove();
+        } else {
+          location.reload();
+        }
       } else {
         alert("Error");
       }
