@@ -6,6 +6,12 @@ exports.index = async function(req, res) {
   res.render('users/index', { users });
 };
 
+exports.getUser = async (req, res) => {
+  const { id } = req.params;
+  const user = await User.find(id);
+  res.render('users/show', { user });
+};
+
 exports.form = async function(req, res) {
   const { id } = req.query;
 

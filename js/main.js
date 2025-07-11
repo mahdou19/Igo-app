@@ -23,6 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const showButtons = document.querySelectorAll(".btn-show");
+  showButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const id = button.getAttribute("data-id");
+      if (id) {
+        window.location.href = `/user/${encodeURIComponent(id)}`;
+      }
+    });
+  });
+
   const form = document.querySelector("form");
   if (form) {
     form.addEventListener("submit", async (e) => {

@@ -26,7 +26,8 @@
                   <td class="px-4 py-3 text-sm text-gray-800">{.name}</td>
                   <td class="px-4 py-3 text-sm text-gray-600">{.email}</td>
                   <td class="px-6 py-3 flex justify-end space-x-2">
-                    <button class="btn-edit px-3 py-1 text-xs font-medium text-white bg-blue-600 rounded hover:bg-blue-700 transition cursor-pointer" data-id={.id}>Edit</button>
+                    <button class="btn-show px-3 py-1 text-xs font-medium text-white bg-blue-600 rounded hover:bg-blue-700 transition cursor-pointer" data-id={.id}>Afficher</button>
+                    <button class="btn-edit px-3 py-1 text-xs font-medium text-white bg-gray-600 rounded hover:bg-gray-700 transition cursor-pointer" data-id={.id}>Edit</button>
                     <button 
                       class="btn-delete px-3 py-1 text-xs font-medium text-white bg-red-600 rounded hover:bg-red-700 transition cursor-pointer"
                       data-id={.id}>
