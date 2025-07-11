@@ -6,7 +6,7 @@
 <div class="max-w-4xl mx-auto p-4 space-y-4 bg-white p-6 rounded-lg shadow-md">
   <h2 class="text-xl font-semibold text-gray-800"> {?user}Modifer{:else}Ajouter{/user} un utilisateur</h2>
 
-  <form method="POST" action="{?user}/edit{:else}/create{/user}">
+  <form method="POST" action="{?user}/users/{user.id}/edit{:else}/user/new{/user}">
       <input type="hidden" name="id" value="{user.id}" />
 
       <div class="pt-2">

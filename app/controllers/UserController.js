@@ -30,7 +30,8 @@ exports.createUser = async function(req, res) {
 };
 
 exports.editUser = async function(req, res) {
-  const { id, name, email } = req.body;
+  const { id } = req.params;
+  const { name, email } = req.body;
   if (!id) {
     return res.status(400).send('Id required');
   }
